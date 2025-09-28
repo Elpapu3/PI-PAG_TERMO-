@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Termo Regulador — HumanTech</title>
+  <style>
+    :root{
+      --color-principal:#0077cc;
+      --fondo:#f6f8fb;
+      --tarjeta:#ffffff;
+      --texto-suave:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      margin:0;
+      background:var(--fondo);
+      color:#0f172a;
+      line-height:1.45;
+    }
+    header{
+      background:linear-gradient(90deg,var(--color-principal),#005fa3);
+      color:#fff;
+      padding:28px 20px;
+    }
+    .contenedor{
+      max-width:1000px;
+      margin:22px auto;
+      padding:0 18px;
+    }
+    .marca{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:10px;
+      background:#fff;
+      display:grid;place-items:center;
+      font-weight:700;
+      color:var(--color-principal);
+    }
+    h1{margin:.1rem 0;font-size:1.35rem}
+    p.intro{margin:6px 0 0;color:#e6f3ff}
+
+    .rejilla{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+    @media(max-width:920px){.rejilla{grid-template-columns:1fr} .barra-lateral{order:2}}
+
+    .tarjeta{
+      background:var(--tarjeta);
+      padding:16px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(12,18,30,0.06);
+    }
+    .texto-suave{color:var(--texto-suave);font-size:.95rem}
+    dl{display:grid;grid-template-columns:140px 1fr;gap:6px 12px;margin:0}
+    dt{font-weight:700;color:#0b1220}
+    dd{margin:0;color:#10203a}
+    section + section{margin-top:14px}
+
+ /* Che, mazzone fijate esto, lo modifique en cuanto a colores, y alginas cosas mas  el diagram */
+    .gantt{margin-top:12px}
+    .fila-gantt{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .fila-gantt .etiqueta{width:160px;font-weight:600}
+    .barras{
+      flex:1;height:18px;
+      background:linear-gradient(90deg,#f0f3f8,#f8fafc);
+      border-radius:6px;
+      padding:2px;display:flex;gap:4px
+    }
+    .bloque{height:14px;border-radius:6px;flex-basis:0}
+    .semana{flex-basis:12.2%}
+    .a{background:#cfefff}
+    .b{background:#cfefff}
+    .c{background:#9fd3ff}
+    .d{background:#66b3ff}
+    .e{background:#ffdca3}
+    .f{background:#ffd6b3}
+    .g{background:#c6f7d6}
+    .h{background:#e6e6ff}
+
+    .leyenda{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{display:inline-flex;gap:8px;align-items:center;background:#fff;padding:8px;border-radius:999px;font-size:.9rem}
+    .color{width:14px;height:14px;border-radius:4px}
+
+    footer{margin:28px 0 60px;color:var(--texto-suave);text-align:center;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <div class="marca">
+    <!-- Reemplazo del logo HT por imagen -->
+<div class="logo">
+  <img src="logo.png" alt="HumanTech Logo" style="width:100%; height:100%; object-fit:contain; border-radius:10px;">
+</div>
+
+        <div>
+          <h1>Termo Regulador - HumanTech</h1>
+          <p class="intro">Proyecto: termo inteligente con control térmico y batería recargable — Inicio 08/04/2025 • 8 semanas</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="rejilla">
+      <div>
+        <section class="tarjeta">
+          <h2>Descripción del proyecto</h2>
+          <p class="texto-suave">
+            Desarrollo de <strong>Termo Regulador</strong>, un termo inteligente que mantiene bebidas calientes a la temperatura seleccionada mediante un dial físico. Integra microcontrolador, sensor de temperatura y calefactor PTC, con batería recargable y foco en seguridad eléctrica.
+          </p>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Objetivos</h2>
+          <ul>
+            <li>Desarrollar un termo funcional con control de temperatura por dial.</li>
+            <li>Implementar sistema térmico seguro (microcontrolador + PTC + sensor).</li>
+            <li>Asegurar autonomía de batería (4–6 h mínimo).</li>
+            <li>Diseñar producto ergonómico y durable.</li>
+            <li>Prototipo operativo en 8 semanas.</li>
+          </ul>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Requerimientos principales</h2>
+          <dl>
+            <dt>Calefactor</dt><dd>Elemento PTC integrado en la base</dd>
+            <dt>Control</dt><dd>Dial físico con 3 niveles: 50°C, 60°C, 70°C</dd>
+            <dt>Batería</dt><dd>Recargable USB-C, autonomía 4–6 h (mín)</dd>
+            <dt>Seguridad</dt><dd>Aislamiento total y protección contra sobrecalentamiento (≥80°C)</dd>
+            <dt>Indicadores</dt><dd>LED para temperatura y estado de batería</dd>
+          </dl>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Interesados & Proveedores</h2>
+          <p class="texto-suave">
+            Usuarios objetivo: estudiantes, docentes y profesionales que consumen bebidas calientes. <br>
+            Patrocinador: FONARSEC. <br>
+            Proveedores: Electrónica Liniers, AnriTV, MercadoLibre, Fadisel (Velleman).
+          </p>
+        </section>
+
+        <section class="tarjeta">
+          <h2>Hitos y cronograma (8 semanas)</h2>
+          <ol>
+            <li>Semana 1: Definición técnica y diseño</li>
+            <li>Semana 2: Compra de componentes</li>
+            <li>Semanas 3–4: Desarrollo del sistema térmico</li>
+            <li>Semana 5: Armado del prototipo</li>
+            <li>Semana 6: Pruebas técnicas y ajustes</li>
+            <li>Semana 7: Pruebas con usuarios</li>
+            <li>Semana 8: Entrega final y cierre</li>
+          </ol>
+
+          <!-- Gantt -->
+          <div class="gantt">
+            <div class="fila-gantt"><div class="etiqueta">A Inicio</div><div class="barras">
+              <div class="bloque semana a"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">B Diseño</div><div class="barras">
+              <div class="bloque semana b"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">C Compra</div><div class="barras">
+              <div class="bloque semana"></div><div class="bloque semana c"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">D Desarrollo</div><div class="barras">
+              <div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana d"></div><div class="bloque semana d"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">E Armado</div><div class="barras">
+              <div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana e"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">F Pruebas técnicas</div><div class="barras">
+              <div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana f"></div><div class="bloque semana"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">G Pruebas usuarios</div><div class="barras">
+              <div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana g"></div><div class="bloque semana"></div>
+            </div></div>
+
+            <div class="fila-gantt"><div class="etiqueta">H Cierre</div><div class="barras">
+              <div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana"></div><div class="bloque semana h"></div>
+            </div></div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="barra-lateral">
+        <div class="tarjeta">
+          <h3>Datos Generales</h3>
+          <dl>
+            <dt>Proyecto</dt><dd>Termo Regulador</dd>
+            <dt>Empresa</dt><dd>HumanTech</dd>
+            <dt>Gerente</dt><dd>Papale Santiago</dd>
+            <dt>Equipo</dt><dd>P. Santiago, R. Torres</dd>
+            <dt>Inicio</dt><dd>08/04/2025</dd>
+            <dt>Duración</dt><dd>8 semanas</dd>
+          </dl>
+        </div>
+
+        <div class="tarjeta" style="margin-top:12px">
+          <h3>Dependencias</h3>
+          <ul class="texto-suave">
+            <li>B depende de A</li>
+            <li>C depende de B</li>
+            <li>D depende de C</li>
+            <li>E depende de D</li>
+            <li>F depende de E</li>
+            <li>G depende de F</li>
+            <li>H depende de G</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Hecho por HumanTech — Documento resumen del proyecto Termo Regulador • Fecha de inicio: 08/04/2025
+    </footer>
+  </main>
+</body>
+</html>
